@@ -1,4 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fareed Sundrani Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
 
-<!-- Add this before closing </body> in your main site HTML -->
+    nav {
+      background-color: #1e1e2f;
+      padding: 1rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li a {
+      color: #f2f2f2;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    nav li a:hover {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 2px;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #f0f0f0, #dcefff);
+    }
+
+    .profile_name {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .contact_info {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #1e1e2f;
+      font-size: 28px;
+      border-bottom: 2px solid #1e1e2f;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .profile_image {
+      width: 150px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 20px;
+    }
+
+    .about_text {
+      overflow: hidden;
+    }
+
+    .skill, .project-card, .recommendation {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .skill img {
+      width: 30px;
+      height: 30px;
+    }
+
+    #recommendation_text {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    #recommend_btn {
+      background-color: #1e88e5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #recommend_btn:hover {
+      background-color: #1565c0;
+    }
+
+    #popup {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e2f;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#recommendations">Recommendations</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <div class="profile_name">Fareed Sundrani</div>
+    <div class="contact_info">
+      <p>Email: fareedalisundrani@gmail.com</p>
+      <p>Phone: +1 702-330-7059</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <img src="images/Fareed_Image.png" alt="Fareed Sundrani Profile" class="profile_image">
+    <div class="about_text">
+      <h2>About Me</h2>
+      <p>Experienced IT Project Manager with expertise in ERP and WMS implementation. Proven track record in streamlining operations and delivering scalable enterprise solutions. Skilled in leading cross-functional teams and optimizing systems across warehouse, logistics, and supply chain environments.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill"><img src="images/project_management.png" alt="Project Management Icon"> Project Management</div>
+    <div class="skill"><img src="images/erp.png" alt="ERP Icon"> ERP Implementation</div>
+    <div class="skill"><img src="images/wms.png" alt="WMS Icon"> WMS Integration</div>
+    <div class="skill"><img src="images/leadership.png" alt="Leadership Icon"> Leadership</div>
+    <div class="skill"><img src="images/cloud_infrastructure.png" alt="Cloud Icon"> Cloud Infrastructure</div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>ERP Overhaul for Manufacturing Firm</h3>
+      <p>Led the end-to-end implementation of Microsoft Dynamics ERP to automate procurement, inventory, and billing for a multi-location manufacturer.</p>
+    </div>
+    <div class="project-card">
+      <h3>WMS Deployment in Distribution Centers</h3>
+      <p>Managed deployment of warehouse management systems across 3 states, improving picking accuracy and reducing order cycle times by 35%.</p>
+    </div>
+    <div class="project-card">
+      <h3>Cloud Migration Strategy</h3>
+      <p>Designed and executed cloud migration roadmap using Azure, resulting in improved scalability and 25% cost savings on IT infrastructure.</p>
+    </div>
+  </section>
+
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="recommendation">Fareed is a natural leader with an exceptional understanding of IT systems and business needs. He consistently delivers projects on time and beyond expectations.</div>
+    <div class="recommendation">I had the pleasure of working with Fareed on a major logistics overhaul. His ability to communicate, lead, and solve complex issues is unmatched.</div>
+    <div class="recommendation">Fareed's insight into ERP and warehouse operations helped our company avoid critical missteps. His contributions were instrumental to our success.</div>
+  </section>
+
+  <section id="add_recommendation">
+    <h2>Add Your Recommendation</h2>
+    <textarea id="recommendation_text"></textarea>
+    <br>
+    <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+    <div id="popup">Thank you for your recommendation!</div>
+  </section>
+
+  <footer>
+    <p>© 2025 Fareed Sundrani</p>
+    <a href="#home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="30px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </a>
+  </footer>
+
+  <script src="js/script.js"></script>
+  
+  <!-- AI Chatbot Widget -->
 <link rel="stylesheet" href="chatbot-widget/chatbot.css">
 <script src="chatbot-widget/chatbot.js"></script>
+
+</body>
+</html>
